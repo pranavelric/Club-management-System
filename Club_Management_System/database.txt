@@ -1,0 +1,271 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Oct 06, 2019 at 08:48 AM
+-- Server version: 5.7.26
+-- PHP Version: 7.3.5
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `club_management_system`
+--
+CREATE DATABASE IF NOT EXISTS `club_management_system` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `club_management_system`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `clubs`
+--
+
+DROP TABLE IF EXISTS `clubs`;
+CREATE TABLE IF NOT EXISTS `clubs` (
+  `id` int(100) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `co` varchar(100) DEFAULT NULL,
+  `coco` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`name`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `clubs`
+--
+
+INSERT INTO `clubs` (`id`, `name`, `co`, `coco`) VALUES
+(1, 'Bit-Byte Programming club\r\n', 'pranav choudhary', 'pranav choudhary'),
+(4, 'CAD club', '', ''),
+(2, 'Electronics Club', '', ''),
+(3, 'Racing Club', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `co`
+--
+
+DROP TABLE IF EXISTS `co`;
+CREATE TABLE IF NOT EXISTS `co` (
+  `id` int(100) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Roll Number` int(100) UNSIGNED NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `branch` varchar(100) NOT NULL,
+  `imagesrc` varchar(100) NOT NULL,
+  `club` int(100) UNSIGNED NOT NULL,
+  `vote` int(100) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Roll Number`,`club`) USING BTREE,
+  UNIQUE KEY `id` (`id`),
+  KEY `club` (`club`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `co`
+--
+
+INSERT INTO `co` (`id`, `Roll Number`, `Name`, `branch`, `imagesrc`, `club`, `vote`) VALUES
+(10, 2018111, 'naruto', 'CSE', 'userimg/736461.png', 1, 0),
+(9, 2018184, 'pranav choudhary', 'CSE', 'userimg/profile.png', 1, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `coco`
+--
+
+DROP TABLE IF EXISTS `coco`;
+CREATE TABLE IF NOT EXISTS `coco` (
+  `id` int(100) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Rollno` int(100) UNSIGNED NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Branch` varchar(100) NOT NULL,
+  `imagesrc` varchar(100) DEFAULT NULL,
+  `club` int(100) UNSIGNED NOT NULL,
+  `vote` int(100) UNSIGNED NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Rollno`,`club`) USING BTREE,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `coco`
+--
+
+INSERT INTO `coco` (`id`, `Rollno`, `Name`, `Branch`, `imagesrc`, `club`, `vote`) VALUES
+(11, 2016153, 'Izuku midoria', 'ME', 'userimg/ruk.jpg', 4, 0),
+(9, 2018184, 'pranav choudhary', 'CSE', 'userimg/profile.png', 1, 2),
+(12, 12345678, 'Allmight', 'ECE', 'userimg/thumb-1920-314574.png\r\n', 2, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `members`
+--
+
+DROP TABLE IF EXISTS `members`;
+CREATE TABLE IF NOT EXISTS `members` (
+  `Rollno` int(100) UNSIGNED NOT NULL,
+  `clubid` int(10) UNSIGNED NOT NULL,
+  PRIMARY KEY (`Rollno`,`clubid`) USING BTREE,
+  KEY `clubid` (`clubid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` (`Rollno`, `clubid`) VALUES
+(2016153, 1),
+(2018111, 1),
+(2018184, 1),
+(2016153, 2),
+(2016153, 3),
+(2016153, 4),
+(12345678, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `senate`
+--
+
+DROP TABLE IF EXISTS `senate`;
+CREATE TABLE IF NOT EXISTS `senate` (
+  `Rollno` int(100) UNSIGNED NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `branch` varchar(100) NOT NULL,
+  `year` int(10) UNSIGNED NOT NULL,
+  `imagesrc` varchar(100) DEFAULT NULL,
+  `vote` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Rollno`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `senate`
+--
+
+INSERT INTO `senate` (`Rollno`, `name`, `branch`, `year`, `imagesrc`, `vote`) VALUES
+(2018111, 'naruto', 'CSE', 2, 'userimg/736461.png', 0),
+(2018184, 'pranav choudhary\r\n', 'CSE', 2, 'userimg/profile.png', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `senatevote`
+--
+
+DROP TABLE IF EXISTS `senatevote`;
+CREATE TABLE IF NOT EXISTS `senatevote` (
+  `voterroll` int(110) NOT NULL,
+  `recroll` int(100) NOT NULL,
+  `votcount` int(100) NOT NULL,
+  `branch` varchar(100) NOT NULL,
+  `recname` varchar(100) NOT NULL,
+  `recimg` varchar(100) NOT NULL,
+  PRIMARY KEY (`voterroll`,`branch`) USING BTREE
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `senatevote`
+--
+
+INSERT INTO `senatevote` (`voterroll`, `recroll`, `votcount`, `branch`, `recname`, `recimg`) VALUES
+(2018111, 2018184, 1, 'CSE', 'naruto', 'userimg/736461.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `students`
+--
+
+DROP TABLE IF EXISTS `students`;
+CREATE TABLE IF NOT EXISTS `students` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Rollno` int(100) UNSIGNED NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Year` int(10) NOT NULL,
+  `branch` varchar(10) NOT NULL,
+  `Email` varchar(120) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `phone` bigint(255) NOT NULL,
+  `imagesrc` varchar(350) DEFAULT NULL,
+  PRIMARY KEY (`Rollno`),
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `Email` (`Email`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`id`, `Rollno`, `Name`, `Year`, `branch`, `Email`, `password`, `phone`, `imagesrc`) VALUES
+(11, 2016153, 'Izuku midoria', 4, 'ME', 'izuku@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 1142753869, 'userimg/ruk.jpg'),
+(10, 2018111, 'naruto', 2, 'CSE', 'naruto@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 1234556, 'userimg/736461.png'),
+(9, 2018184, 'pranav choudhary', 2, 'CSE', '2018184@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 9636444004, 'userimg/profile.png'),
+(12, 12345678, 'Allmight', 3, 'ECE', 'allmight@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 77575414, 'userimg/thumb-1920-314574.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vote`
+--
+
+DROP TABLE IF EXISTS `vote`;
+CREATE TABLE IF NOT EXISTS `vote` (
+  `voterroll` int(110) NOT NULL,
+  `recroll` int(110) NOT NULL,
+  `clubid` int(110) NOT NULL,
+  `votecnt` int(110) NOT NULL DEFAULT '0',
+  `co` tinyint(1) NOT NULL DEFAULT '0',
+  `coco` tinyint(1) NOT NULL DEFAULT '0',
+  `senate` tinyint(1) NOT NULL DEFAULT '0',
+  `recname` varchar(100) NOT NULL,
+  `recimg` varchar(100) NOT NULL,
+  PRIMARY KEY (`voterroll`,`clubid`,`co`,`coco`,`senate`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `vote`
+--
+
+INSERT INTO `vote` (`voterroll`, `recroll`, `clubid`, `votecnt`, `co`, `coco`, `senate`, `recname`, `recimg`) VALUES
+(2016153, 2018184, 1, 1, 0, 1, 0, 'pranav choudhary', 'userimg/profile.png'),
+(2016153, 2018184, 1, 1, 1, 0, 0, 'pranav choudhary', 'userimg/profile.png'),
+(2018111, 2018184, 1, 1, 0, 1, 0, 'pranav choudhary', 'userimg/profile.png'),
+(2018111, 2018184, 1, 1, 1, 0, 0, 'pranav choudhary', 'userimg/profile.png'),
+(2018184, 2016153, 1, 1, 0, 1, 0, 'Izuku midoria', 'userimg/ruk.jpg');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `co`
+--
+ALTER TABLE `co`
+  ADD CONSTRAINT `co_ibfk_1` FOREIGN KEY (`Roll Number`) REFERENCES `students` (`Rollno`),
+  ADD CONSTRAINT `co_ibfk_2` FOREIGN KEY (`club`) REFERENCES `clubs` (`id`);
+
+--
+-- Constraints for table `coco`
+--
+ALTER TABLE `coco`
+  ADD CONSTRAINT `coco_ibfk_1` FOREIGN KEY (`Rollno`) REFERENCES `students` (`Rollno`);
+
+--
+-- Constraints for table `members`
+--
+ALTER TABLE `members`
+  ADD CONSTRAINT `members_ibfk_1` FOREIGN KEY (`Rollno`) REFERENCES `students` (`Rollno`),
+  ADD CONSTRAINT `members_ibfk_2` FOREIGN KEY (`clubid`) REFERENCES `clubs` (`id`);
+
+--
+-- Constraints for table `senate`
+--
+ALTER TABLE `senate`
+  ADD CONSTRAINT `senate_ibfk_1` FOREIGN KEY (`Rollno`) REFERENCES `students` (`Rollno`);
+COMMIT;

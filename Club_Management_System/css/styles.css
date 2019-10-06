@@ -1,0 +1,277 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+#basebody{
+    background-color: bisque;
+
+    background-image: url("https://www.pixelstalk.net/wp-content/uploads/images1/Dark-space-wallpaper-1920x1200.jpg");
+
+}
+
+.navbar-brand:hover{
+    color: chartreuse;
+    size: 2vw;
+    font-style: italic;
+}
+.card{
+    border: 6px solid silver;
+}
+#profile{
+    border: 6px solid blue;
+    margin-top: 2%;
+    border-radius:50% ;
+   border-color: blue;
+    width: 20%;
+height: 250px;
+
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: width 2s,height 2s;
+    transition-timing-function: linear;
+
+}
+#profile:hover{
+    width: 500px;
+    height: 500px;
+}
+@keyframes example {
+    0%   {border-color: red;}
+    25%  {border-color: yellow;}
+    50%  {border-color: green;}
+    100% {border-color: blue;}
+}
+#profilebody{
+    color: bisque;
+    background-color: coral;
+    background-repeat: no-repeat;
+    background-image: url("https://www.pixelstalk.net/wp-content/uploads/images1/Dark-space-wallpaper-1920x1200.jpg");
+}
+#bprofile{
+    color: paleturquoise;
+    font-family: cursive ;
+
+}
+.navbar{
+    font-family: icon-large;
+}
+.card:hover
+{
+    border: 2px solid red;
+    background-color: antiquewhite;
+}
+.card .btn:hover{
+    background-color: black;
+    border: 1px  red solid;
+    border-radius: 100%
+}
+#footerbase{
+    color: bisque;
+    background-color: #212529;;
+font-family: "Bookman Old Style";
+
+}
+#fotterbottom{
+    color: snow;
+    background-color: black;
+    font-family: "Bookman Old Style";
+}
+footer a{
+    color: bisque;
+}
+footer a:hover{
+    color: hotpink;
+}
+
+
+/*details*/
+
+#detailsbody{
+    background-color: bisque;
+    background-image: url("https://www.pixelstalk.net/wp-content/uploads/images1/Dark-space-wallpaper-1920x1200.jpg");
+
+}
+h1{
+    color: floralwhite;
+    font-family: icon-large;
+
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+td:hover {background-color:#f5f5f5;
+color: salmon;
+}
+#detail{
+    color: gold;
+    font-family: cursive;
+    font-style: italic;
+}
+#table{
+    font-family: "Bookman Old Style";
+    color: khaki;
+    font-size: 2vw;
+margin-bottom: 3%;
+    width: 100%;
+}
+th{
+    font-family:"cursive;";
+}
+/*end details*/
+
+/*votego*/
+#votego{
+    background-color: bisque;
+    background-repeat: no-repeat;
+width: 100%;
+    height: 100%;
+    background-image: url("http://datagame.io/files/2016/05/voting_box_1920_1080.png");
+
+}
+
+#votegopic1{
+    border: 6px solid red;
+    border-radius:50% ;
+    margin-left: 6%;
+    margin-top: 2%;
+    width: 20%;
+    height: 250px;
+    animation-name: example1;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    transition: width 2s,height 2s;
+    transition-timing-function: cubic-bezier(0,0,0,0);
+    animation-iteration-count: infinite;
+}
+#votegopic1:hover{
+    width: 350px;
+    height: 350px;
+
+}
+@keyframes example1 {
+    0%   {border-color: red;}
+    100% {border-color: yellow;}
+}
+#votebtn{
+ margin-left: 2%;
+    margin-top: 2%;
+    width: 50%;
+    color: firebrick;
+    font-size: 2vw;
+    background-color: bisque;
+    border: 2px solid brown;
+    border-radius: 10%;
+}
+#votebtn:hover{
+    background-color: purple;
+    color: snow;
+
+}
+/*endvotego*/
+
+/*cocovote*/
+#votecard{
+    font-size: 2vw;
+    padding: 20px;
+
+}
+#cardvote{
+  border: 8px solid goldenrod;
+}
+#cardvote:hover{
+    border: 10px solid green;
+    background-color: lightcyan;
+}
+/*covote */
+
+
+/* results */
+
+#resultbody{
+    background-color: lightcyan;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+/*  background-image: url("http://www.photobackgroundhd.com/wp-content/uploads/2018/10/Nature-Best-Images.jpg");
+*/
+/*background-image: url("https://i.imgur.com/zkc1tq7.jpg");
+*/
+}
+
+h3{
+    border: 1px solid greenyellow;
+    width: fit-content;
+    margin-top: 2%;
+    background-color: white;
+    color: black;
+font-size: 2vw;
+    font-family: cursive;
+}
+#resulthe{
+    color: brown;
+    font-size: 3em;
+    background-color: lightgreen;
+    border: 2px green solid;
+    border-radius: 20%;
+    margin-top: 2%;
+    text-align: center;
+
+}
+
+#resulthe:hover{
+    color: red;
+    font-size: 3em;
+    background-color: lightblue;
+    border: 2px solid blue;
+    border-radius: 20%;
+    margin-top: 2%;
+    text-align: center;
+
+}
+hr{
+    border: 0;
+    height: 12px;
+
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 10.5);
+}
+#tableresult{
+    background-color: bisque;
+    color: firebrick;
+    font-family: cursive;
+    font-size: 2vw;
+border: 2px solid black;
+
+
+}
+#tableresult>tr,th,td{
+    border: 2px solid purple;
+}
+
+#tableresult>tr,th,td:hover{
+    background-color: cornsilk;
+    color: black;
+}
+
+
+
+#tableresult>tr,th{
+    background-color: sandybrown;
+    color: saddlebrown;
+}
+
+#tableresult>tr,th:hover{
+    background-color: greenyellow;
+    color: brown;
+}
+
+
+
