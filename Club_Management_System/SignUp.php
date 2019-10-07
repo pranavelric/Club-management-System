@@ -29,7 +29,6 @@
             <option>CSE</option>
             <option>ME</option>
             <option>ECE</option>
-            <option>Design</option>
         </select>
     </div>
     <label>Roll Number</label>

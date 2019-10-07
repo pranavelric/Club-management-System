@@ -2,8 +2,6 @@
 session_start();
 $errors=array();
 
-//$db =  @mysqli_connect("localhost","root","",'club_management_system');
-
 if(isset($_POST['submit'])){
 
     $db =  @mysqli_connect("localhost","root","",'club_management_system');
@@ -20,7 +18,10 @@ if(isset($_POST['submit'])){
     $filename=$_FILES['upload']['name'];
     $tempname=$_FILES['upload']['tmp_name'];
 
+    if($filename!="")
     $folder = "userimg/".$filename;
+    else
+        $folder= "img/"."user.png";
 //echo $folder;
     move_uploaded_file($tempname,$folder);
     if (empty($name)) { array_push($errors, "Username is required"); }
