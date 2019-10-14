@@ -79,12 +79,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@319c10bc" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -113,6 +108,10 @@
       <workItem from="1570264369540" duration="8021000" />
       <workItem from="1570285250355" duration="20218000" />
       <workItem from="1570458644365" duration="1616000" />
+      <workItem from="1570618025551" duration="193000" />
+      <workItem from="1570619745890" duration="170000" />
+      <workItem from="1570981315690" duration="3553000" />
+      <workItem from="1571060917937" duration="4532000" />
     </task>
     <servers />
   </component>

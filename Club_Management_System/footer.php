@@ -58,9 +58,9 @@
             <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
 
                 <!-- Content -->
-                <h6 class="text-uppercase font-weight-bold">Club Management</h6>
+                <h6 class="text-uppercase font-weight-bold">Club Management System</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Motive of this website is to provide you basic information about various clubs of IIITDM Jabalpur</p>
+                <p>Motive of this website is to provide you basic information about various clubs of PDPM IIITDM Jabalpur</p>
 
             </div>
             <!-- Grid column -->
@@ -71,16 +71,16 @@
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                 <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <h6 class="text-uppercase font-weight-bold">Contact Us</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
                     <i class="fas fa-home mr-3"></i> Jabalpur, Madhya Pradesh, India</p>
                 <p>
-                    <i class="fas fa-envelope mr-3"></i> <a href="mailto:info@example.com">info@example.com</a></p>
+                    <i class="fas fa-envelope mr-3"></i> <a href="mailto:info@example.com">Elric@gamil.com</a></p>
                 <p>
-                    <i class="fas fa-phone mr-3 "   ></i><a href="tel:+ 01 234 567 88"> + 01 234 567 88</a></p>
+                    <i class="fas fa-phone mr-3 "   ></i><a href="tel:+ 91 234 567 888 90"> + 91 234 567 888 90</a></p>
                 <p>
-                    <i class="fas fa-print mr-3"></i><a href="tel:+ 01 234 567 89"> + 01 234 567 89</a></p>
+                    <i class="fas fa-print mr-3"></i><a href="tel:+ 91 234 567 889 90"> + 91 234 567 889 90</a></p>
 
             </div>
             <!-- Grid column -->
@@ -92,7 +92,7 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center text-black-50 " id="fotterbottom">© 2018 Copyright:
+    <div class="footer-copyright text-center text-black-50 " id="fotterbottom">© 2019 Copyright:
         <a class="dark-grey-text" href="http://nooooooooooooooo.com/"> ClubManage.com</a>
     </div>
     <!-- Copyright -->

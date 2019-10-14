@@ -15,7 +15,7 @@
 <div class="jumbotron" style="border: 2px solid red;margin: 10%;border-radius: 10%">
     <form class="" action="log_in.php" method="post">
         <center>
-            <p class="h4 mb-4">Register</p>
+            <p class="h4 mb-4">Login</p>
         </center>
 
 
