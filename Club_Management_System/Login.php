@@ -11,11 +11,12 @@
 
 
 </head>
-<body>
-<div class="jumbotron" style="border: 2px solid red;margin: 10%;border-radius: 10%">
+<body style="background-image: url('https://i.pinimg.com/originals/9c/80/0f/9c800fe8c727bfc4bc9de03da16cc51b.jpg');background-repeat: no-repeat;background-size: cover;height: 100vh;">
+<?php require "navbar.php"?>
+<div class="jumbotron " style="border: 2px solid red;margin: 10%;border-radius: 10%;  background: rgba(162, 76, 191, 0.7); color: gold;font-size: 1.9em">
     <form class="" action="log_in.php" method="post">
         <center>
-            <p class="h4 mb-4">Login</p>
+            <p class="h4 mb-4" style="font-size: 1.2em; text-decoration: underline;">Login</p>
         </center>
 
 
@@ -29,8 +30,9 @@
 
 
         <!-- Sign in button -->
-        <button class="btn btn-info btn-block my-4" name = "log" type="submit">Login</button>
-
+        <center>
+        <button class="btn btn-info btn-block my-4" name = "log" type="submit" style="width: 30%; background-color: gold;border: 3px solid darkblue;color: purple">Login</button>
+</center>
 
 
     </form>

@@ -35,7 +35,7 @@ if(isset($_POST['log'])){
         }else {
             array_push($errors, "Wrong email/password combination");
             foreach ($errors as $e)
-                echo "<Strong><b style='color: red;margin: 2%;font-size: 450%'>".$e."</b></Strong><br>";
+                echo "<Strong><b><a href='Login.php' style='color: red;margin: 2%;font-size: 450%'>".$e."</a></b></Strong><br>";
         }
     }
 }else{

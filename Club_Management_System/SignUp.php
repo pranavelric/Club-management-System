@@ -11,12 +11,13 @@
 
 
 </head>
-<body><!-- Material form register -->
+<body  style="background-image: url('https://i.pinimg.com/originals/9c/80/0f/9c800fe8c727bfc4bc9de03da16cc51b.jpg');background-repeat: no-repeat;background-size: cover;height: 100vh;"><!-- Material form register -->
 <!-- Default form login -->
-<div class="jumbotron" style="border: 2px solid red;margin: 10%;border-radius: 10%">
+<?php require "navbar.php"?>
+<div class="jumbotron" style="border: 2px solid red;margin-left: 25%;margin-top: 3%;margin-bottom: 10%;border-radius: 10% ;background: rgba(162, 76, 191, 0.9); color: gold; width: 50%;">
 <form class="" action="sign_up.php" method="post" enctype="multipart/form-data">
 <center>
-    <p class="h4 mb-4">Register</p>
+    <p class="h4 mb-4" style="text-decoration: underline">Register</p>
 </center>
 
     <label>Name</label>
