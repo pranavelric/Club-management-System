@@ -7,6 +7,24 @@
     <html>
     <head>
         <title>Vote</title>
+
+        <!--internal bootstrap -->
+        <link rel="stylesheet" href="boots/css/bootstrap.css" >
+        <link rel="stylesheet" href="boots/css/bootstrap.min.css" >
+
+        <link href="boots/font/css/all.css" rel="stylesheet">
+        <script defer src="boots/font/js/all.js"></script>
+        <script defer src="boots/jquery.js"></script>
+        <script defer src="boots/jquery3.4.1.js"></script>
+        <script defer src="boots/popper.js"></script>
+        <script defer src="boots/boot.min.js"></script>
+
+        <!-- internal css ended-->
+
+
+
+
+<!--
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
               crossorigin="anonymous">
@@ -22,7 +40,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
               integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
               crossorigin="anonymous">
-
+-->
         <link rel="stylesheet" type="text/css" href='css/styles.css'>
 
     </head>

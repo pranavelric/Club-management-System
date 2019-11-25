@@ -2,16 +2,37 @@
 <html>
 <head>
     <title>Club_Management</title>
+
+
+
+    <!--internal bootstrap -->
+    <link rel="stylesheet" href="boots/css/bootstrap.css" >
+    <link rel="stylesheet" href="boots/css/bootstrap.min.css" >
+    <link href="boots/font/css/all.css" rel="stylesheet">
+    <script defer src="boots/font/js/all.js"></script>
+    <script defer src="boots/jquery.js"></script>
+    <script defer src="boots/jquery3.4.1.js"></script>
+    <script defer src="boots/popper.js"></script>
+    <script defer src="boots/boot.min.js"></script>
+
+    <!-- internal css ended-->
+
+
+
+<!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    -->
+
     <link rel="stylesheet" href="css/styles.css"type="text/css">
 
 
     <style>
-        /* The container */
+
+
         .container {
             display: block;
             position: relative;
@@ -77,9 +98,10 @@
     </style>
 
 </head>
-<body><!-- Material form register -->
-<!-- Default form login -->
-<div class="jumbotron" style="border: 2px solid red;margin: 10%;border-radius: 10%">
+
+<body id ="admreg" >
+<?php require "navbar.php"?>
+<div class="jumbotron" style="border: 2px solid red;margin-left: 25%;margin-top: 3%;margin-bottom: 10%;border-radius: 10% ;background: rgba(162, 76, 191, 0.9); color: gold; width: 50%;">
 <form class="" action="adminreg_inp.php" method="post" enctype="multipart/form-data">
 <center>
     <p class="h4 mb-4">Register</p>
@@ -118,6 +140,7 @@
 
 
 <div>
+
     <label class="container">Bit-Byte programming club
         <input type="radio" checked="checked" name="club" value="1">
         <span class="checkmark"></span>
@@ -134,7 +157,7 @@
         <input type="radio"name="club" value="4">
         <span class="checkmark"></span>
     </label>
-    <div>
+
     </div>
 
 
@@ -148,10 +171,9 @@
     </div>
 
 
-
-    <!-- Sign in button -->
-    <button class="btn btn-info  btn-block my-2" id="adminbtn" name = "submit" type="submit">Submit</button>
-
+<center>
+    <button class="btn btn-info  btn-block my-2" id="adminbtn" name = "submit" type="submit" style="width: 30%; background-color: gold;border: 3px solid darkblue;color: purple">Submit</button>
+</center>
 
 
 </form>

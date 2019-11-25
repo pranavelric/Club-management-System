@@ -2,17 +2,50 @@
 <html>
 <head>
     <title>Club_Management</title>
+
+    <!--internal bootstrap -->
+    <link rel="stylesheet" href="boots/css/bootstrap.css" >
+    <link rel="stylesheet" href="boots/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="boots/css/bootstrap-grid.css" >
+    <link rel="stylesheet" href="boots/css/bootstrap-grid.min.css" >
+    <link rel="stylesheet" href="boots/css/bootstrap-reboot.css" >
+    <link rel="stylesheet" href="boots/css/bootstrap-reboot.min.css" >
+    <link rel="stylesheet" href="boots/css/bootstrap-grid.css.map" >
+    <link rel="stylesheet" href="boots/css/bootstrap-grid.min.css.map" >
+    <link rel="stylesheet" href="boots/css/bootstrap-reboot.css.map" >
+    <link rel="stylesheet" href="boots/css/bootstrap-reboot.min.css.map" >
+    <link rel="stylesheet" href="boots/css/bootstrap.css.map" >
+    <link rel="stylesheet" href="boots/css/bootstrap.min.css.map" >
+
+    <script src="boots/js/bootstrap.bundle.js"></script>
+    <script src="boots/js/bootstrap.bundle.js.map"></script>
+    <script src="boots/js/bootstrap.bundle.min.js"></script>
+    <script src="boots/js/bootstrap.bundle.min.js.map"></script>
+    <script src="boots/js/bootstrap.js"></script>
+    <script src="boots/js/bootstrap.js.map"></script>
+    <script src="boots/js/bootstrap.min.js"></script>
+    <script src="boots/js/bootstrap.min.js.map"></script>
+    <link href="boots/font/css/all.css" rel="stylesheet">
+    <script defer src="boots/font/js/all.js"></script>
+    <script defer src="boots/jquery.js"></script>
+    <script defer src="boots/jquery3.4.1.js"></script>
+    <script defer src="boots/popper.js"></script>
+    <script defer src="boots/boot.min.js"></script>
+
+    <!-- internal css ended-->
+<!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    -->
     <link rel="stylesheet" href="css/styles.css"type="text/css">
 
 
 </head>
-<body  style="background-image: url('https://i.pinimg.com/originals/9c/80/0f/9c800fe8c727bfc4bc9de03da16cc51b.jpg');background-repeat: no-repeat;background-size: cover;height: 100vh;"><!-- Material form register -->
-<!-- Default form login -->
+<body  id ="signup"style="">
+
 <?php require "navbar.php"?>
 <div class="jumbotron" style="border: 2px solid red;margin-left: 25%;margin-top: 3%;margin-bottom: 10%;border-radius: 10% ;background: rgba(162, 76, 191, 0.9); color: gold; width: 50%;">
 <form class="" action="sign_up.php" method="post" enctype="multipart/form-data">
@@ -83,8 +116,9 @@
 
 
     <!-- Sign in button -->
-    <button class="btn btn-info btn-block my-4" name = "submit" type="submit">Sign Up</button>
-
+    <center>
+    <button class="btn btn-info btn-block my-4" name = "submit" type="submit" style="width: 30%; background-color: gold;border: 3px solid darkblue;color: purple">Sign Up</button>
+    </center>
 
 
 </form>
