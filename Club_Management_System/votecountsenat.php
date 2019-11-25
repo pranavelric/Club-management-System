@@ -5,6 +5,8 @@ $voteremail =strval($_SESSION['email']);
 $branch= $_POST['vote'];
 $senate = $_POST['senate'];
 $receiverRollno = $_POST['receiverroll'];
+$recimg= $_POST['recimg'];
+$recnam = $_POST['recnam'];
 /*
 echo $receiverRollno;
 echo $senate;*/
@@ -19,7 +21,7 @@ $ans4 = mysqli_fetch_assoc($result);
 $voteRollno = $ans4['Rollno'];
 
 $count++;
-$query ="INSERT INTO senatevote (`voterroll` ,`recroll`,`votcount`,`branch`) VALUES('$voteRollno','$receiverRollno','$count','$branch')";
+$query ="INSERT INTO senatevote (`voterroll` ,`recroll`,`votcount`,`branch`,`recname`,`recimg`) VALUES('$voteRollno','$receiverRollno','$count','$branch','$recnam',  '$recimg' )";
 if(mysqli_query($db, $query) ){
     echo "<a href='votego.php'><h1 style='color: Green'> You voted : Click here to go back</h1></a>";
 }

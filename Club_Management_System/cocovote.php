@@ -114,6 +114,8 @@ if($aa['clubid']==$a['club']) {
         <input type="hidden" name="senate" value="0"/>
         <input type="hidden" name="receiverroll" value="<?php echo $a['Rollno']?>"/>
         <input type="hidden" name="clubid" value="<?php echo $a['club']?>"/>
+        <input type="hidden" name="recimg" value="<?php echo $a['imagesrc']?>">
+        <input type="hidden" name="recnam" value ="<?php echo $a['Name']?>">
         <button class="btn btn-success" name="vote" value="<?php print_r($a) ?>" type="submit">Vote</button>
     </form>
     <?php

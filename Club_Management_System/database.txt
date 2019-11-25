@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 06, 2019 at 08:48 AM
+-- Generation Time: Nov 25, 2019 at 06:43 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.5
 
@@ -11,6 +11,12 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `club_management_system`
@@ -39,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `clubs` (
 --
 
 INSERT INTO `clubs` (`id`, `name`, `co`, `coco`) VALUES
-(1, 'Bit-Byte Programming club\r\n', 'pranav choudhary', 'pranav choudhary'),
+(1, 'Bit-Byte Programming club\r\n', 'Palash rathore', 'Suyash Khare'),
 (4, 'CAD club', '', ''),
 (2, 'Electronics Club', '', ''),
 (3, 'Racing Club', '', '');
@@ -62,15 +68,17 @@ CREATE TABLE IF NOT EXISTS `co` (
   PRIMARY KEY (`Roll Number`,`club`) USING BTREE,
   UNIQUE KEY `id` (`id`),
   KEY `club` (`club`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `co`
 --
 
 INSERT INTO `co` (`id`, `Roll Number`, `Name`, `branch`, `imagesrc`, `club`, `vote`) VALUES
-(10, 2018111, 'naruto', 'CSE', 'userimg/736461.png', 1, 0),
-(9, 2018184, 'pranav choudhary', 'CSE', 'userimg/profile.png', 1, 2);
+(17, 2017173, 'Palash rathore', 'CSE', 'userimg/prof1.jpg', 1, 1),
+(18, 2018117, 'Keertydev ', 'ME', 'userimg/WhatsApp Image 2019-11-24 at 10.24.36 PM.jpeg', 3, 0),
+(19, 2018163, 'Nihit', 'ME', 'userimg/prof14.jpg', 3, 0),
+(16, 2018184, 'pranav choudhary', 'CSE', 'userimg/profile.png', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -89,16 +97,17 @@ CREATE TABLE IF NOT EXISTS `coco` (
   `vote` int(100) UNSIGNED NOT NULL DEFAULT '0',
   PRIMARY KEY (`Rollno`,`club`) USING BTREE,
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `coco`
 --
 
 INSERT INTO `coco` (`id`, `Rollno`, `Name`, `Branch`, `imagesrc`, `club`, `vote`) VALUES
-(11, 2016153, 'Izuku midoria', 'ME', 'userimg/ruk.jpg', 4, 0),
-(9, 2018184, 'pranav choudhary', 'CSE', 'userimg/profile.png', 1, 2),
-(12, 12345678, 'Allmight', 'ECE', 'userimg/thumb-1920-314574.png\r\n', 2, 0);
+(15, 2018104, 'Harshit kapoor', 'CSE', 'userimg/prof11.jpg', 2, 0),
+(16, 2018108, 'Jagrit Seth', 'ECE', 'userimg/prof13.jpg', 2, 0),
+(17, 2018191, 'Prateek goyle', 'CSE', 'userimg/prof7.png', 1, 0),
+(18, 2018257, 'Suyash Khare', 'CSE', 'userimg/prof2.jpg', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -119,13 +128,44 @@ CREATE TABLE IF NOT EXISTS `members` (
 --
 
 INSERT INTO `members` (`Rollno`, `clubid`) VALUES
-(2016153, 1),
-(2018111, 1),
+(12345, 1),
+(2017173, 1),
+(2018052, 1),
+(2018182, 1),
 (2018184, 1),
-(2016153, 2),
-(2016153, 3),
-(2016153, 4),
-(12345678, 4);
+(2018191, 1),
+(2018257, 1),
+(2018273, 1),
+(2017173, 2),
+(2018052, 2),
+(2018099, 2),
+(2018104, 2),
+(2018108, 2),
+(2018114, 2),
+(2018182, 2),
+(2018191, 2),
+(2018200, 2),
+(2018244, 2),
+(2018273, 2),
+(2018052, 3),
+(2018099, 3),
+(2018104, 3),
+(2018108, 3),
+(2018117, 3),
+(2018163, 3),
+(2018244, 3),
+(2018257, 3),
+(2018275, 3),
+(2018285, 3),
+(2018052, 4),
+(2018099, 4),
+(2018104, 4),
+(2018108, 4),
+(2018114, 4),
+(2018117, 4),
+(2018163, 4),
+(2018200, 4),
+(2018285, 4);
 
 -- --------------------------------------------------------
 
@@ -149,8 +189,10 @@ CREATE TABLE IF NOT EXISTS `senate` (
 --
 
 INSERT INTO `senate` (`Rollno`, `name`, `branch`, `year`, `imagesrc`, `vote`) VALUES
-(2018111, 'naruto', 'CSE', 2, 'userimg/736461.png', 0),
-(2018184, 'pranav choudhary\r\n', 'CSE', 2, 'userimg/profile.png', 0);
+(2018052, 'Aviral Tiwari', 'ECE', 1, 'userimg/prof9.png', 0),
+(2018184, 'pranav choudhary', 'CSE', 2, 'userimg/profile.png', 0),
+(2018200, 'Rahul Verma', 'ECE', 3, 'userimg/prof5.jpg', 0),
+(2018244, 'Sourabh patel', 'ME', 4, 'userimg/prof4.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -174,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `senatevote` (
 --
 
 INSERT INTO `senatevote` (`voterroll`, `recroll`, `votcount`, `branch`, `recname`, `recimg`) VALUES
-(2018111, 2018184, 1, 'CSE', 'naruto', 'userimg/736461.png');
+(12345, 2018184, 1, 'CSE', 'pranav choudhary', 'userimg/profile.png');
 
 -- --------------------------------------------------------
 
@@ -191,22 +233,36 @@ CREATE TABLE IF NOT EXISTS `students` (
   `branch` varchar(10) NOT NULL,
   `Email` varchar(120) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
-  `phone` bigint(255) NOT NULL,
-  `imagesrc` varchar(350) DEFAULT NULL,
+  `phone` bigint(10) NOT NULL,
+  `imagesrc` varchar(350) DEFAULT 'img/user.png',
   PRIMARY KEY (`Rollno`),
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `Email` (`Email`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `students`
 --
 
 INSERT INTO `students` (`id`, `Rollno`, `Name`, `Year`, `branch`, `Email`, `password`, `phone`, `imagesrc`) VALUES
-(11, 2016153, 'Izuku midoria', 4, 'ME', 'izuku@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 1142753869, 'userimg/ruk.jpg'),
-(10, 2018111, 'naruto', 2, 'CSE', 'naruto@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 1234556, 'userimg/736461.png'),
+(18, 12345, 'admin', 4, 'CSE', 'admin@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 1234567, 'img/user.png'),
+(19, 2017173, 'Palash rathore', 2, 'CSE', '2018173@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 9630629262, 'userimg/prof1.jpg'),
+(28, 2018052, 'Aviral Tiwari', 1, 'ECE', '2018052@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 7845916235, 'userimg/prof9.png'),
+(31, 2018099, 'Harsh', 1, 'ME', '2018099@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 7789654231, 'userimg/prof12.jpg'),
+(30, 2018104, 'Harshit kapoor', 4, 'CSE', '2018104@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 7894561235, 'userimg/prof11.jpg'),
+(32, 2018108, 'Jagrit Seth', 3, 'ECE', '2018108@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 8895462317, 'userimg/prof13.jpg'),
+(21, 2018114, 'Karan Tiwari', 2, 'ECE', '2018114@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 9516234872, 'userimg/prof3.jpg'),
+(22, 2018117, 'Keertydev ', 2, 'ME', '2018117@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 7856493219, 'userimg/WhatsApp Image 2019-11-24 at 10.24.36 PM.jpeg'),
+(33, 2018163, 'Nihit', 2, 'ME', '2018163@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 5598746321, 'userimg/prof14.jpg'),
+(27, 2018182, 'Kamal Swami', 4, 'CSE', '2018182@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 5196234875, 'userimg/prof8.jpg'),
 (9, 2018184, 'pranav choudhary', 2, 'CSE', '2018184@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 9636444004, 'userimg/profile.png'),
-(12, 12345678, 'Allmight', 3, 'ECE', 'allmight@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 77575414, 'userimg/thumb-1920-314574.png');
+(26, 2018191, 'Prateek goyle', 2, 'CSE', '2018191@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 6556498713, 'userimg/prof7.png'),
+(24, 2018200, 'Rahul Verma', 3, 'ECE', '2018200@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 8653214752, 'userimg/prof5.jpg'),
+(23, 2018244, 'Sourabh patel', 3, 'ME', '2018244@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 7849516238, 'userimg/prof4.jpg'),
+(20, 2018257, 'Suyash Khare', 2, 'CSE', '2018257@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 7785936426, 'userimg/prof2.jpg'),
+(25, 2018273, 'Vaibhav Pandey', 2, 'CSE', '2018273@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 3265987415, 'userimg/prof6.jpg'),
+(17, 2018275, 'Vedant ', 2, 'ECE', 'vedant@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 7897984654, 'img/user.png'),
+(29, 2018285, 'Vipul goyle', 4, 'CSE', '2018285@iiitdmj.ac.in', '81dc9bdb52d04dc20036dbd8313ed055', 7539148625, 'userimg/prof10.jpg');
 
 -- --------------------------------------------------------
 
@@ -233,11 +289,8 @@ CREATE TABLE IF NOT EXISTS `vote` (
 --
 
 INSERT INTO `vote` (`voterroll`, `recroll`, `clubid`, `votecnt`, `co`, `coco`, `senate`, `recname`, `recimg`) VALUES
-(2016153, 2018184, 1, 1, 0, 1, 0, 'pranav choudhary', 'userimg/profile.png'),
-(2016153, 2018184, 1, 1, 1, 0, 0, 'pranav choudhary', 'userimg/profile.png'),
-(2018111, 2018184, 1, 1, 0, 1, 0, 'pranav choudhary', 'userimg/profile.png'),
-(2018111, 2018184, 1, 1, 1, 0, 0, 'pranav choudhary', 'userimg/profile.png'),
-(2018184, 2016153, 1, 1, 0, 1, 0, 'Izuku midoria', 'userimg/ruk.jpg');
+(12345, 2018257, 1, 1, 0, 1, 0, 'Suyash Khare', 'userimg/prof2.jpg'),
+(12345, 2017173, 1, 1, 1, 0, 0, 'Palash rathore', 'userimg/prof1.jpg');
 
 --
 -- Constraints for dumped tables
@@ -269,3 +322,7 @@ ALTER TABLE `members`
 ALTER TABLE `senate`
   ADD CONSTRAINT `senate_ibfk_1` FOREIGN KEY (`Rollno`) REFERENCES `students` (`Rollno`);
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

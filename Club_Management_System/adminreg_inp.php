@@ -29,10 +29,10 @@ if(isset($_POST['submit'])){
     if ($user) {
         if ($user['Rollno'] === $rollno) {
 
-            echo  $rollno."<br> ".$name."<br> ".$year."<br> ".$branch."<br> ".$club."<br>";
+           // echo  $rollno."<br> ".$name."<br> ".$year."<br> ".$branch."<br> ".$club."<br>";
 
 
-            echo  $rollno."<br> ".$name."<br> ".$year."<br> ".$branch."<br> ".$club."<br>".$reg;
+            //echo  $rollno."<br> ".$name."<br> ".$year."<br> ".$branch."<br> ".$club."<br>".$reg;
 
             if($reg=="Coordinator")
             {
@@ -46,7 +46,7 @@ if(isset($_POST['submit'])){
             }
             if($reg=="Senate")
             {
-                $query ="INSERT INTO senate (`Rollno`, `name`, `branch`,`year`,`imagesrc` , `vote`) VALUES('$rollno', '$name','$year','$folder','$club','$vote')";
+                $query ="INSERT INTO senate (`Rollno`, `name`, `branch`,`year`,`imagesrc` , `vote`) VALUES('$rollno', '$name','$branch','$year','$folder','$vote')";
                 mysqli_query($db, $query) OR die("not done senate" );
             }
 

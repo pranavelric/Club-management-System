@@ -96,6 +96,8 @@ while($ans = mysqli_fetch_assoc($results))
                             <form action="votecountsenat.php" method="post">
                                <input type="hidden" name="senate" value="0"/>
                                 <input type="hidden" name="receiverroll" value="<?php echo $a['Rollno']?>"/>
+                                <input type="hidden" name="recimg" value="<?php echo $a['imagesrc']?>">
+                                <input type="hidden" name="recnam" value ="<?php echo $a['name']?>">
                                 <button class="btn btn-success" name="vote" value="<?php echo $a['branch']?>" type="submit">Vote</button>
                             </form>
                             <?php
